@@ -51,7 +51,7 @@ const Header = () => {
               </span>
             </a>
             <button className="bg-white text-orange-600 px-4 py-2 text-sm rounded-lg font-medium hover:bg-gray-100 transition">
-              Login
+              Logins
             </button>
           </div>
 
