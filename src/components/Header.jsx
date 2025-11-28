@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RiShoppingBasketLine } from "@remixicon/react";
+import { RiSearchLine } from "@remixicon/react";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -30,14 +31,14 @@ const Header = () => {
           </a>
 
           {/* SEARCH BAR DESKTOP */}
-          <div className="bg-white hidden md:flex flex-1 mx-8">
+          <div className="bg-white hidden md:flex flex-1 mx-8 rounded-lg overflow-hidden">
             <input
               type="text"
               placeholder="Cari di MyApp"
-              className="w-full px-4 py-2 rounded-l-lg text-gray-700 focus:outline-none"
+              className="w-full px-4 py-2 text-gray-700 focus:outline-none"
             />
-            <button className="bg-white text-orange-600 px-6 py-2 font-semibold rounded-r-lg hover:bg-gray-100 transition">
-              🔍
+            <button className="text-orange-600 px-6 py-2 font-semibold hover:bg-gray-100 transition flex items-center justify-center">
+              <RiSearchLine size={20} className="text-[#04a6bf]" />
             </button>
           </div>
 
