@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { RiShoppingBasketLine } from "@remixicon/react";
-import { RiSearchLine } from "@remixicon/react";
+import { RiShoppingBasketLine, RiSearchLine } from "@remixicon/react";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
+
       {/* TOP BAR */}
       <div className="bg-[#04a6bf] text-white text-sm py-1">
         <div className="container mx-auto px-6 flex justify-between">
@@ -15,7 +15,7 @@ const Header = () => {
             <a href="#seller">Seller Centre</a>
             <a href="#help">Bantuan</a>
           </div>
-          <div className="flex space-x-4">
+          <div className="hidden md:flex space-x-4">
             <a href="#login">Login</a>
             <a href="#register">Daftar</a>
           </div>
@@ -23,10 +23,20 @@ const Header = () => {
       </div>
 
       {/* MAIN HEADER */}
-      <nav className="bg-[linear-gradient(to_right,#04a6bf,#04a6bf)] shadow-md">
+      <nav className="bg-[#04a6bf] shadow-md">
         <div className="container mx-auto px-6 py-3 flex items-center justify-between">
-          {/* LOGO */}
-          <a href="/" className="text-2xl font-bold text-white">
+
+          {/* LOGO + LOGIN DAFTAR (MOBILE) */}
+          <div className="flex items-center space-x-4 md:hidden">
+            <a href="/" className="text-2xl font-bold text-white">
+              Rishop
+            </a>
+            <a href="#login" className="text-white font-bold text-sm">Login</a>
+            <a href="#register" className="text-white font-bold text-sm">Daftar</a>
+          </div>
+
+          {/* LOGO (DESKTOP) */}
+          <a href="/" className="text-2xl font-bold text-white hidden md:block">
             Rishop
           </a>
 
@@ -37,12 +47,12 @@ const Header = () => {
               placeholder="Cari di MyApp"
               className="w-full px-4 py-2 text-gray-700 focus:outline-none"
             />
-            <button className="text-orange-600 px-6 py-2 font-semibold hover:bg-gray-100 transition flex items-center justify-center">
+            <button className="px-6 flex items-center justify-center hover:bg-gray-100 transition">
               <RiSearchLine size={20} className="text-[#04a6bf]" />
             </button>
           </div>
 
-          {/* ICONS */}
+          {/* ICONS DESKTOP */}
           <div className="hidden md:flex items-center space-x-6 text-white text-xl">
             <a href="#cart" className="relative">
               <RiShoppingBasketLine size={28} className="text-white" />
@@ -55,7 +65,7 @@ const Header = () => {
             </button>
           </div>
 
-          {/* MENU MOBILE */}
+          {/* MENU MOBILE BUTTON */}
           <button
             onClick={() => setOpen(!open)}
             aria-label="Toggle Menu"
@@ -73,33 +83,25 @@ const Header = () => {
               placeholder="Cari di MyApp"
               className="flex-1 px-4 py-2 text-gray-700 focus:outline-none"
             />
-            <button className="bg-white text-orange-600 px-4 py-2 font-semibold hover:bg-gray-100 transition">
-              🔍
+            <button className="px-4 flex items-center justify-center hover:bg-gray-100 transition">
+              <RiSearchLine size={18} className="text-[#04a6bf]" />
             </button>
           </div>
         </div>
+
       </nav>
 
-      {/* MOBILE DRAWER MENU */}
+      {/* DRAWER MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-white border-t shadow-lg">
-          <a href="#download" className="block px-6 py-3 text-gray-700">
-            Download App
-          </a>
-          <a href="#seller" className="block px-6 py-3 text-gray-700">
-            Seller Centre
-          </a>
-          <a href="#help" className="block px-6 py-3 text-gray-700">
-            Bantuan
-          </a>
-          <a href="#cart" className="block px-6 py-3 text-gray-700">
-            Keranjang 🛒
-          </a>
-          <button className="w-full text-left px-6 py-3 bg-orange-600 text-white">
-            Login
-          </button>
+        <div className="md:hidden bg-white shadow-sm">
+          <a href="#download" className="block px-6 py-0.5 text-gray-700 font-bold text-sm">Download App</a>
+          <a href="#seller" className="block px-6 py-0.5 text-gray-700 font-bold text-sm">Seller Centre</a>
+          <a href="#help" className="block px-6 py-0.5 text-gray-700 font-bold text-sm">Bantuan</a>
+          <a href="#cart" className="block px-6 py-0.5 text-gray-700 font-bold text-sm flex items-center">Keranjang</a>
+          <a href="#login" className="block px-6 py-0.5 text-gray-700 font-bold text-sm">Login</a>
         </div>
       )}
+
     </header>
   );
 };
