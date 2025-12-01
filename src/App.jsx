@@ -1,11 +1,12 @@
 import React from 'react'
 import Category from './components/Category'
+import Footer from './components/Footer';
 import Header from './components/Header'
 import Submenu from './components/Submenu'
 
 const CardSection = ({ children }) => {
   return (
-    <div className="bg-white w-[calc(100%-40px)] md:w-full max-w-5xl mt-6 mx-auto">
+    <div className="bg-white w-[calc(100%-40px)] md:w-full max-w-5xl mt-2 mx-auto">
       {children}
     </div>
   );
@@ -20,6 +21,10 @@ const App = () => {
 
       {/* contoh jika tambah content baru nanti */}
       {/* <CardSection><KomponenBaru /></CardSection> */}
+      {/* ✅ Footer FULL width dan selalu di bawah */}
+      <footer className="w-full mt-auto">
+        <Footer />
+      </footer>
     </main>
   )
 }
