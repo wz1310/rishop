@@ -133,8 +133,8 @@ footer {
   background: white;
   width: 100%;
   padding: 12px 16px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left:35px;
+  padding-right: 35px;
   border-top: 2px solid #04a6bf; /* biru tema */
   text-align: justify;          /* 👈 teks rata kanan-kiri */
   text-justify: inter-word;     /* spacing kata lebih natural */

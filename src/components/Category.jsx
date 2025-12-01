@@ -62,7 +62,7 @@ const Category = () => {
 
   return (
     <section className={isMobile ? "mobileContainer" : "webContainer"}>
-      <h2 className="text-sm font-bold mb-2 text-center">Kategori</h2>
+      <h2 className="text-sm font-bold mb-2 text-center">KATEGORI</h2>
 
       {showLeft && (
   <button onClick={prev} className={isMobile ? "mobileArrow mobileLeft" : "webArrow webLeft"}>‹</button>
