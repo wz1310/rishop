@@ -5,7 +5,7 @@ import Submenu from './components/Submenu'
 
 const CardSection = ({ children }) => {
   return (
-    <div className="bg-white shadow-xl w-[calc(100%-4px)] md:w-full max-w-5xl mt-6 mx-auto rounded-xl">
+    <div className="bg-white w-[calc(100%-40px)] md:w-full max-w-5xl mt-6 mx-auto">
       {children}
     </div>
   );
