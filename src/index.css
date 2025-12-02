@@ -46,8 +46,9 @@
 }
 
 .webLabel {
-  font-size: 10px;
+  font-size: 12px;
   color: #4b5563;
+  font-weight: 700;
 }
 
 .webArrow {
@@ -95,7 +96,8 @@
 }
 
 .mobileLabel {
-  font-size: 7px;
+  font-size: 12px;
+  font-weight: 700;
   color: #6b7280;
 }
 

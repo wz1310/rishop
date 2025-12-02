@@ -1,35 +1,41 @@
 import React from "react";
+import submenu1 from "../assets/images/submenu1.webp"
+import submenu2 from "../assets/images/submenu2.webp"
+import submenu3 from "../assets/images/submenu3.webp"
+import submenu4 from "../assets/images/submenu4.webp"
+import submenu5 from "../assets/images/submenu5.webp"
+import submenu6 from "../assets/images/submenu6.webp"
 
 const menuItems = [
   {
     label: "Pilih Lokal",
     link: "/m/shopee-pilih-lokal",
-    // img: "https://cf.shopee.co.id/file/id-11134258-7rbk2-m6yxbqa9ubyh26_xhdpi",
+    img: submenu1,
   },
   {
     label: "Shopee Mall",
     link: "/mall",
-    // img: "https://cf.shopee.co.id/file/id-50009109-21067727429e50037f52d3bda8a8bcf6_xhdpi",
+    img: submenu2,
   },
   {
     label: "Pulsa & Tiket",
     link: "/produk-digital",
-    // img: "https://cf.shopee.co.id/file/id-50009109-4f6225c6af9676bb98b6ef90b5eea2c1_xhdpi",
+    img: submenu3,
   },
   {
     label: "Flash Sale",
     link: "/flash_sale",
-    // img: "https://cf.shopee.co.id/file/id-11134258-7rbkc-mas4hs48hfp464_xhdpi",
+    img: submenu4,
   },
   {
     label: "Supermarket",
     link: "/supermarket",
-    // img: "https://cf.shopee.co.id/file/id-50009109-973424e34266b401880d7dcc2d40156d_xhdpi",
+    img: submenu5,
   },
   {
     label: "Semua Promo",
     link: "/promo",
-    // img: "https://cf.shopee.co.id/file/id-50009109-b26e4a6a1add042d828b58143fceda1a_xhdpi",
+    img: submenu6,
   },
 ];
 
@@ -57,7 +63,7 @@ const Submenu = () => {
                   className="w-[65%] h-[65%] object-contain"
                 />
               </div>
-              <span className="text-[11px] mt-2 text-center leading-tight">{item.label}</span>
+              <span className="text-[11px] mt-2 text-center font-bold leading-tight">{item.label}</span>
             </a>
           ))}
         </div>
